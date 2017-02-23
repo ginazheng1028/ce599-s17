@@ -1,0 +1,858 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_68c16c2e054f4a0bb9ad7074871206db {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_68c16c2e054f4a0bb9ad7074871206db" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_68c16c2e054f4a0bb9ad7074871206db = L.map('map_68c16c2e054f4a0bb9ad7074871206db', {
+                                           center:[38.034,-84.5],
+                                           zoom: 4,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_8f8f3c7e276d460ea02fb58d450b5404 = L.tileLayer(
+                'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+
+        
+        
+            
+
+            var circle_marker_d9c7e9b814884fb6b43b017a2ffa162e = L.circle(
+                [38.0364990234375,-84.60590362548828],
+                5,
+                {
+                    color: 'DarkCyan',
+                    fillColor: 'DarkCyan',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_43493bc740d64a89b96b2a2417b07a5d = L.popup({maxWidth: '300'});
+
+            
+                var html_af43274e69184180a71be9673c7c9425 = $('         <div id="html_af43274e69184180a71be9673c7c9425"                 style="width: 100.0%; height: 100.0%;">                 Lexington KY (LEX)</div>                 ')[0];
+                popup_43493bc740d64a89b96b2a2417b07a5d.setContent(html_af43274e69184180a71be9673c7c9425);
+            
+
+            circle_marker_d9c7e9b814884fb6b43b017a2ffa162e.bindPopup(popup_43493bc740d64a89b96b2a2417b07a5d);
+
+            
+        
+        
+            
+
+            var circle_marker_3dc34f39234a49c2bc3d2d60b63334a7 = L.circle(
+                [33.63669967651367,-84.4281005859375],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_da7a08b2a3044262bf67bc3f799230eb = L.popup({maxWidth: '300'});
+
+            
+                var html_80b52c4f50b94eb7992df0fe889dd3d5 = $('         <div id="html_80b52c4f50b94eb7992df0fe889dd3d5"                 style="width: 100.0%; height: 100.0%;">                 Atlanta(ATL)</div>                 ')[0];
+                popup_da7a08b2a3044262bf67bc3f799230eb.setContent(html_80b52c4f50b94eb7992df0fe889dd3d5);
+            
+
+            circle_marker_3dc34f39234a49c2bc3d2d60b63334a7.bindPopup(popup_da7a08b2a3044262bf67bc3f799230eb);
+
+            
+        
+        
+            
+                var poly_line_eff1bf76fd0f4ec4871cb561e8de47cb = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [33.63669967651367, -84.4281005859375]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_eff1bf76fd0f4ec4871cb561e8de47cb);
+            
+        
+            
+            var popup_bdef6b53c9aa425cbb74ece0796a4798 = L.popup({maxWidth: '300'});
+
+            
+                var html_e3a5a938d2284091aa33025af215350d = $('         <div id="html_e3a5a938d2284091aa33025af215350d"                 style="width: 100.0%; height: 100.0%;">                 LEX-ATL</div>                 ')[0];
+                popup_bdef6b53c9aa425cbb74ece0796a4798.setContent(html_e3a5a938d2284091aa33025af215350d);
+            
+
+            poly_line_eff1bf76fd0f4ec4871cb561e8de47cb.bindPopup(popup_bdef6b53c9aa425cbb74ece0796a4798);
+
+            
+        
+        
+            
+
+            var circle_marker_00fef50c06e849ef9ba4842db40a8631 = L.circle(
+                [35.2140007019043,-80.94309997558594],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_bf86b61e605f4b489dc2617285633dc8 = L.popup({maxWidth: '300'});
+
+            
+                var html_6fb835cd6e80407ebe383c1ab4af59d5 = $('         <div id="html_6fb835cd6e80407ebe383c1ab4af59d5"                 style="width: 100.0%; height: 100.0%;">                 Charlotte(CLT)</div>                 ')[0];
+                popup_bf86b61e605f4b489dc2617285633dc8.setContent(html_6fb835cd6e80407ebe383c1ab4af59d5);
+            
+
+            circle_marker_00fef50c06e849ef9ba4842db40a8631.bindPopup(popup_bf86b61e605f4b489dc2617285633dc8);
+
+            
+        
+        
+            
+                var poly_line_3dc9c41105b64df4aa16c48ba8a3f094 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [35.2140007019043, -80.94309997558594]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_3dc9c41105b64df4aa16c48ba8a3f094);
+            
+        
+            
+            var popup_5324f00540bc4eca942a67d260edefd3 = L.popup({maxWidth: '300'});
+
+            
+                var html_dcc752a72a484d43afc86a7976dded59 = $('         <div id="html_dcc752a72a484d43afc86a7976dded59"                 style="width: 100.0%; height: 100.0%;">                 LEX-CLT</div>                 ')[0];
+                popup_5324f00540bc4eca942a67d260edefd3.setContent(html_dcc752a72a484d43afc86a7976dded59);
+            
+
+            poly_line_3dc9c41105b64df4aa16c48ba8a3f094.bindPopup(popup_5324f00540bc4eca942a67d260edefd3);
+
+            
+        
+        
+            
+
+            var circle_marker_3f8a33e9e11e4d129dc3c1b78350af62 = L.circle(
+                [32.896800994873054,-97.03800201416016],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_6536cfc0cb8f412c8c1ab85f4229e606 = L.popup({maxWidth: '300'});
+
+            
+                var html_af634f25a2984cf889d143ecf24985ea = $('         <div id="html_af634f25a2984cf889d143ecf24985ea"                 style="width: 100.0%; height: 100.0%;">                 Dallas-Fort Worth(DFW)</div>                 ')[0];
+                popup_6536cfc0cb8f412c8c1ab85f4229e606.setContent(html_af634f25a2984cf889d143ecf24985ea);
+            
+
+            circle_marker_3f8a33e9e11e4d129dc3c1b78350af62.bindPopup(popup_6536cfc0cb8f412c8c1ab85f4229e606);
+
+            
+        
+        
+            
+                var poly_line_4a95cc9ce0b343ce9f7e9a81bb640ad1 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [32.896800994873054, -97.03800201416016]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_4a95cc9ce0b343ce9f7e9a81bb640ad1);
+            
+        
+            
+            var popup_f609fd2e4fea44b6b51141245ccfe90a = L.popup({maxWidth: '300'});
+
+            
+                var html_fa86f823439945dc86e38f7eaf883e1b = $('         <div id="html_fa86f823439945dc86e38f7eaf883e1b"                 style="width: 100.0%; height: 100.0%;">                 LEX-DFW</div>                 ')[0];
+                popup_f609fd2e4fea44b6b51141245ccfe90a.setContent(html_fa86f823439945dc86e38f7eaf883e1b);
+            
+
+            poly_line_4a95cc9ce0b343ce9f7e9a81bb640ad1.bindPopup(popup_f609fd2e4fea44b6b51141245ccfe90a);
+
+            
+        
+        
+            
+
+            var circle_marker_c2fc638df764422991a0cbd3663d21b1 = L.circle(
+                [41.97859955,-87.90480042],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_7b5b44a62aee47c38730b416830ec168 = L.popup({maxWidth: '300'});
+
+            
+                var html_719b75a9ea9449a293933ffe05bf48f8 = $('         <div id="html_719b75a9ea9449a293933ffe05bf48f8"                 style="width: 100.0%; height: 100.0%;">                 Chicago(ORD)</div>                 ')[0];
+                popup_7b5b44a62aee47c38730b416830ec168.setContent(html_719b75a9ea9449a293933ffe05bf48f8);
+            
+
+            circle_marker_c2fc638df764422991a0cbd3663d21b1.bindPopup(popup_7b5b44a62aee47c38730b416830ec168);
+
+            
+        
+        
+            
+                var poly_line_640a733d2cac4cb988dcb2393572087e = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [41.97859955, -87.90480042]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_640a733d2cac4cb988dcb2393572087e);
+            
+        
+            
+            var popup_d037579184794ae28dd1acd091f8dde2 = L.popup({maxWidth: '300'});
+
+            
+                var html_1faeaceb7c904da6a269b76b3d2ef3e4 = $('         <div id="html_1faeaceb7c904da6a269b76b3d2ef3e4"                 style="width: 100.0%; height: 100.0%;">                 LEX-ORD</div>                 ')[0];
+                popup_d037579184794ae28dd1acd091f8dde2.setContent(html_1faeaceb7c904da6a269b76b3d2ef3e4);
+            
+
+            poly_line_640a733d2cac4cb988dcb2393572087e.bindPopup(popup_d037579184794ae28dd1acd091f8dde2);
+
+            
+        
+        
+            
+
+            var circle_marker_664e69950b1447b3be6f4620349858ae = L.circle(
+                [38.8521,-77.037697],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_1a878248304e4cd58f676e21475ea2c6 = L.popup({maxWidth: '300'});
+
+            
+                var html_688d23036c47431ca7980cdac75d6a2c = $('         <div id="html_688d23036c47431ca7980cdac75d6a2c"                 style="width: 100.0%; height: 100.0%;">                 Washington(DCA)</div>                 ')[0];
+                popup_1a878248304e4cd58f676e21475ea2c6.setContent(html_688d23036c47431ca7980cdac75d6a2c);
+            
+
+            circle_marker_664e69950b1447b3be6f4620349858ae.bindPopup(popup_1a878248304e4cd58f676e21475ea2c6);
+
+            
+        
+        
+            
+                var poly_line_35ae1756c92d4992a570b26022162ff6 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [38.8521, -77.037697]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_35ae1756c92d4992a570b26022162ff6);
+            
+        
+            
+            var popup_6d30beb6a7ef4349b1cb2b744d462211 = L.popup({maxWidth: '300'});
+
+            
+                var html_98d106fc798048f0900fb8c9560607cd = $('         <div id="html_98d106fc798048f0900fb8c9560607cd"                 style="width: 100.0%; height: 100.0%;">                 LEX-DCA</div>                 ')[0];
+                popup_6d30beb6a7ef4349b1cb2b744d462211.setContent(html_98d106fc798048f0900fb8c9560607cd);
+            
+
+            poly_line_35ae1756c92d4992a570b26022162ff6.bindPopup(popup_6d30beb6a7ef4349b1cb2b744d462211);
+
+            
+        
+        
+            
+
+            var circle_marker_9175ef2228e346dcbae7f1354ec83d7a = L.circle(
+                [42.212398529052734,-83.35340118408203],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_93880b62c55241d79dd6fc56315a3b53 = L.popup({maxWidth: '300'});
+
+            
+                var html_0cc865a9e0b24a92b0e87d8b676ec8f4 = $('         <div id="html_0cc865a9e0b24a92b0e87d8b676ec8f4"                 style="width: 100.0%; height: 100.0%;">                 Detroit(DTW)</div>                 ')[0];
+                popup_93880b62c55241d79dd6fc56315a3b53.setContent(html_0cc865a9e0b24a92b0e87d8b676ec8f4);
+            
+
+            circle_marker_9175ef2228e346dcbae7f1354ec83d7a.bindPopup(popup_93880b62c55241d79dd6fc56315a3b53);
+
+            
+        
+        
+            
+                var poly_line_fc6bc6547a3d414594987887136ec219 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [42.212398529052734, -83.35340118408203]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_fc6bc6547a3d414594987887136ec219);
+            
+        
+            
+            var popup_f63c6b6e381a44e7bc6a19e42455572e = L.popup({maxWidth: '300'});
+
+            
+                var html_319a9cbdae4c452896c816c56d5c49b2 = $('         <div id="html_319a9cbdae4c452896c816c56d5c49b2"                 style="width: 100.0%; height: 100.0%;">                 LEX-DTW</div>                 ')[0];
+                popup_f63c6b6e381a44e7bc6a19e42455572e.setContent(html_319a9cbdae4c452896c816c56d5c49b2);
+            
+
+            poly_line_fc6bc6547a3d414594987887136ec219.bindPopup(popup_f63c6b6e381a44e7bc6a19e42455572e);
+
+            
+        
+        
+            
+
+            var circle_marker_43748158d8ad463f9f2d589ca2597054 = L.circle(
+                [40.77719879,-73.87259674],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_8470b4934a1b4aada7efe61e791d04ba = L.popup({maxWidth: '300'});
+
+            
+                var html_07860d65f3d74ec3904d1e4a62b8dfbb = $('         <div id="html_07860d65f3d74ec3904d1e4a62b8dfbb"                 style="width: 100.0%; height: 100.0%;">                 New York(LGA)</div>                 ')[0];
+                popup_8470b4934a1b4aada7efe61e791d04ba.setContent(html_07860d65f3d74ec3904d1e4a62b8dfbb);
+            
+
+            circle_marker_43748158d8ad463f9f2d589ca2597054.bindPopup(popup_8470b4934a1b4aada7efe61e791d04ba);
+
+            
+        
+        
+            
+                var poly_line_f781277f001240218654979b3a6f1622 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [40.77719879, -73.87259674]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_f781277f001240218654979b3a6f1622);
+            
+        
+            
+            var popup_3f077634b0b640359c6e6a86047830c6 = L.popup({maxWidth: '300'});
+
+            
+                var html_6552a80b711049a4812a83456c631ea8 = $('         <div id="html_6552a80b711049a4812a83456c631ea8"                 style="width: 100.0%; height: 100.0%;">                 LEX-LGA</div>                 ')[0];
+                popup_3f077634b0b640359c6e6a86047830c6.setContent(html_6552a80b711049a4812a83456c631ea8);
+            
+
+            poly_line_f781277f001240218654979b3a6f1622.bindPopup(popup_3f077634b0b640359c6e6a86047830c6);
+
+            
+        
+        
+            
+
+            var circle_marker_f3c537c7083040019924f40a16444b4e = L.circle(
+                [44.8819999695,-93.22180175780001],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_17764ea993e94c9f85d517d71b0be537 = L.popup({maxWidth: '300'});
+
+            
+                var html_b056ca3c6d5c4474b8f260fd356776ff = $('         <div id="html_b056ca3c6d5c4474b8f260fd356776ff"                 style="width: 100.0%; height: 100.0%;">                 Minneapolis(MSP)</div>                 ')[0];
+                popup_17764ea993e94c9f85d517d71b0be537.setContent(html_b056ca3c6d5c4474b8f260fd356776ff);
+            
+
+            circle_marker_f3c537c7083040019924f40a16444b4e.bindPopup(popup_17764ea993e94c9f85d517d71b0be537);
+
+            
+        
+        
+            
+                var poly_line_b2e98394dab1438fa25126015cf07b89 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [44.8819999695, -93.22180175780001]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_b2e98394dab1438fa25126015cf07b89);
+            
+        
+            
+            var popup_93157edb89e747259502fc6d80b347a7 = L.popup({maxWidth: '300'});
+
+            
+                var html_6095d4b01d0d437785aa29aaccb2168e = $('         <div id="html_6095d4b01d0d437785aa29aaccb2168e"                 style="width: 100.0%; height: 100.0%;">                 LEX-MSP</div>                 ')[0];
+                popup_93157edb89e747259502fc6d80b347a7.setContent(html_6095d4b01d0d437785aa29aaccb2168e);
+            
+
+            poly_line_b2e98394dab1438fa25126015cf07b89.bindPopup(popup_93157edb89e747259502fc6d80b347a7);
+
+            
+        
+        
+            
+
+            var circle_marker_8853381289bf4eeb9935b49a11e3d75b = L.circle(
+                [26.072599411010746,-80.15270233154297],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_432007385501441b9c433c86e81a8343 = L.popup({maxWidth: '300'});
+
+            
+                var html_24b865c53a134aa689796f052b7587a2 = $('         <div id="html_24b865c53a134aa689796f052b7587a2"                 style="width: 100.0%; height: 100.0%;">                 Fort Lauderdale(FLL)</div>                 ')[0];
+                popup_432007385501441b9c433c86e81a8343.setContent(html_24b865c53a134aa689796f052b7587a2);
+            
+
+            circle_marker_8853381289bf4eeb9935b49a11e3d75b.bindPopup(popup_432007385501441b9c433c86e81a8343);
+
+            
+        
+        
+            
+                var poly_line_1b7a5074d3a44f0785f8df5eb0de8304 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [26.072599411010746, -80.15270233154297]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_1b7a5074d3a44f0785f8df5eb0de8304);
+            
+        
+            
+            var popup_8bb89f9f98e247cea7de0386125406bb = L.popup({maxWidth: '300'});
+
+            
+                var html_59d71a0150224cb7b2e345d64344456f = $('         <div id="html_59d71a0150224cb7b2e345d64344456f"                 style="width: 100.0%; height: 100.0%;">                 LEX-FLL</div>                 ')[0];
+                popup_8bb89f9f98e247cea7de0386125406bb.setContent(html_59d71a0150224cb7b2e345d64344456f);
+            
+
+            poly_line_1b7a5074d3a44f0785f8df5eb0de8304.bindPopup(popup_8bb89f9f98e247cea7de0386125406bb);
+
+            
+        
+        
+            
+
+            var circle_marker_b26ad0e1f1b14181affc92d6b8dee588 = L.circle(
+                [26.92020035,-81.99050140000001],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_38c1190357fb45d5a92aeea33e7ae05b = L.popup({maxWidth: '300'});
+
+            
+                var html_7c76134c23774ed78114dc7c6cd05744 = $('         <div id="html_7c76134c23774ed78114dc7c6cd05744"                 style="width: 100.0%; height: 100.0%;">                 Punta Gorda(PGD)</div>                 ')[0];
+                popup_38c1190357fb45d5a92aeea33e7ae05b.setContent(html_7c76134c23774ed78114dc7c6cd05744);
+            
+
+            circle_marker_b26ad0e1f1b14181affc92d6b8dee588.bindPopup(popup_38c1190357fb45d5a92aeea33e7ae05b);
+
+            
+        
+        
+            
+                var poly_line_75d633b924c2406ca9214f33dde75ca3 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [26.92020035, -81.99050140000001]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_75d633b924c2406ca9214f33dde75ca3);
+            
+        
+            
+            var popup_15d63e0a72484ab8ac6a6d8abd7d7e8c = L.popup({maxWidth: '300'});
+
+            
+                var html_39af054c952b45f5afcae4f6853f2198 = $('         <div id="html_39af054c952b45f5afcae4f6853f2198"                 style="width: 100.0%; height: 100.0%;">                 LEX-PGD</div>                 ')[0];
+                popup_15d63e0a72484ab8ac6a6d8abd7d7e8c.setContent(html_39af054c952b45f5afcae4f6853f2198);
+            
+
+            poly_line_75d633b924c2406ca9214f33dde75ca3.bindPopup(popup_15d63e0a72484ab8ac6a6d8abd7d7e8c);
+
+            
+        
+        
+            
+
+            var circle_marker_c44e08b0707d4941aa1c33a0be941ca7 = L.circle(
+                [27.91020012,-82.68740082],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_9ebd3f451817419b829d5e47c0b1b011 = L.popup({maxWidth: '300'});
+
+            
+                var html_3d2e01d449674d1eb9339d3ac04c226b = $('         <div id="html_3d2e01d449674d1eb9339d3ac04c226b"                 style="width: 100.0%; height: 100.0%;">                 St. Petersburg(PIE)</div>                 ')[0];
+                popup_9ebd3f451817419b829d5e47c0b1b011.setContent(html_3d2e01d449674d1eb9339d3ac04c226b);
+            
+
+            circle_marker_c44e08b0707d4941aa1c33a0be941ca7.bindPopup(popup_9ebd3f451817419b829d5e47c0b1b011);
+
+            
+        
+        
+            
+                var poly_line_9d2ad9f81f0845faa23fb5bf805bf397 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [27.91020012, -82.68740082]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_9d2ad9f81f0845faa23fb5bf805bf397);
+            
+        
+            
+            var popup_55011156ad7a49aba3d32fb1d38fbb18 = L.popup({maxWidth: '300'});
+
+            
+                var html_dd2366fffb3e44b7bcc8f4719b6a8853 = $('         <div id="html_dd2366fffb3e44b7bcc8f4719b6a8853"                 style="width: 100.0%; height: 100.0%;">                 LEX-PIE</div>                 ')[0];
+                popup_55011156ad7a49aba3d32fb1d38fbb18.setContent(html_dd2366fffb3e44b7bcc8f4719b6a8853);
+            
+
+            poly_line_9d2ad9f81f0845faa23fb5bf805bf397.bindPopup(popup_55011156ad7a49aba3d32fb1d38fbb18);
+
+            
+        
+        
+            
+
+            var circle_marker_9de5982fa6fe4794b410f26d5a0a2f2e = L.circle(
+                [28.7775993347168,-81.23750305175781],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_280e083b1e7c4888ab479df70bdef06d = L.popup({maxWidth: '300'});
+
+            
+                var html_baa187cfcf1e426d9df5a835196db6e5 = $('         <div id="html_baa187cfcf1e426d9df5a835196db6e5"                 style="width: 100.0%; height: 100.0%;">                 Sanford(SFB)</div>                 ')[0];
+                popup_280e083b1e7c4888ab479df70bdef06d.setContent(html_baa187cfcf1e426d9df5a835196db6e5);
+            
+
+            circle_marker_9de5982fa6fe4794b410f26d5a0a2f2e.bindPopup(popup_280e083b1e7c4888ab479df70bdef06d);
+
+            
+        
+        
+            
+                var poly_line_fe2df90e5c3a478282be920584c84274 = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [28.7775993347168, -81.23750305175781]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_fe2df90e5c3a478282be920584c84274);
+            
+        
+            
+            var popup_d92ed17924234c95aad477ef3fe2f092 = L.popup({maxWidth: '300'});
+
+            
+                var html_590e332451ce40b392816ef991700b9c = $('         <div id="html_590e332451ce40b392816ef991700b9c"                 style="width: 100.0%; height: 100.0%;">                 LEX-SFB</div>                 ')[0];
+                popup_d92ed17924234c95aad477ef3fe2f092.setContent(html_590e332451ce40b392816ef991700b9c);
+            
+
+            poly_line_fe2df90e5c3a478282be920584c84274.bindPopup(popup_d92ed17924234c95aad477ef3fe2f092);
+
+            
+        
+        
+            
+
+            var circle_marker_e58cb2a24a034a0eaeb5a4b48cff373a = L.circle(
+                [29.98439979553223,-95.34140014648438],
+                5,
+                {
+                    color: 'MidnightBlue',
+                    fillColor: 'MidnightBlue',
+                    fillOpacity: 0.6
+                    }
+                )
+                .addTo(map_68c16c2e054f4a0bb9ad7074871206db);
+            
+        
+            
+            var popup_1570c875396143d6a9dca8b7cc2578ff = L.popup({maxWidth: '300'});
+
+            
+                var html_ccf93566c4eb478d892292c56a3d61d0 = $('         <div id="html_ccf93566c4eb478d892292c56a3d61d0"                 style="width: 100.0%; height: 100.0%;">                 Houston(IAH)</div>                 ')[0];
+                popup_1570c875396143d6a9dca8b7cc2578ff.setContent(html_ccf93566c4eb478d892292c56a3d61d0);
+            
+
+            circle_marker_e58cb2a24a034a0eaeb5a4b48cff373a.bindPopup(popup_1570c875396143d6a9dca8b7cc2578ff);
+
+            
+        
+        
+            
+                var poly_line_c004c517596242ff97d15d42541d28ce = L.polyline(
+                    [[38.0364990234375, -84.60590362548828], [29.98439979553223, -95.34140014648438]],
+                    {
+                        
+                        weight: 2,
+                        
+                        });
+                map_68c16c2e054f4a0bb9ad7074871206db.addLayer(poly_line_c004c517596242ff97d15d42541d28ce);
+            
+        
+            
+            var popup_bc3a8baa8fa64c168d67bee7044ecd58 = L.popup({maxWidth: '300'});
+
+            
+                var html_95458f6fa56b4ee5a7a6b41f493f5217 = $('         <div id="html_95458f6fa56b4ee5a7a6b41f493f5217"                 style="width: 100.0%; height: 100.0%;">                 LEX-IAH</div>                 ')[0];
+                popup_bc3a8baa8fa64c168d67bee7044ecd58.setContent(html_95458f6fa56b4ee5a7a6b41f493f5217);
+            
+
+            poly_line_c004c517596242ff97d15d42541d28ce.bindPopup(popup_bc3a8baa8fa64c168d67bee7044ecd58);
+
+            
+        
+        
+        
+        </script>
+        
